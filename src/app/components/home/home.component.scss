@@ -3,38 +3,101 @@
 @import "./../../../styles.scss";
 
 .homeMain {
-    min-height: 100vh;
-    width: 100vw;
-    background-color: $background-main;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-top: 10vh;
 
-
-    img {
-        display: block;
-        height: 100vh;
-    }
-
-    .headerTitel {
-        width: 100%;
+    .homeContent {
         display: flex;
-        align-items: center;
-        flex-direction: column;
 
-        .headerText {
-            display: flex;
+        @media (max-width: 650px) {
+            align-items: center;
+            flex-direction: column;
+        }
 
-            .h3Rotate {
-                color: $fontcolor-main;
-                writing-mode: vertical-lr;
-                text-align: center;
+        .profilPic {
+            object-fit: cover;
+            height: 75vh;
+            margin: 0 5rem 0 5rem;
 
+            @media (max-width: 1150px) {
+                margin: 0;
+            }
+
+            @media (max-width: 850px) {
+                height: 70vw;
+            }
+
+            @media (max-width: 650px) {
+                height: auto;
+                width: 60vw;
             }
         }
 
+        .homeSideContent {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5rem;
 
+            @media (max-width: 650px) {
+                margin-bottom: 0;
+            }
+
+            .headline {
+                display: flex;
+
+                .h3Rotate {
+                    color: $fontcolor-main;
+                    writing-mode: vertical-lr;
+                    text-align: center;
+                    transform: rotate(180deg);
+                }
+            }
+
+            .contactButton {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
+    .linkbar {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
 
+        a {
+            display: flex;
+            align-items: center;
+            margin-left: 2.5rem;
+
+            @media (max-width: 500px) {
+                margin-left: 1rem;
+            }
+
+            &:last-child {
+                margin-right: 1rem;
+            }
+
+            img {
+                filter: invert(1);
+                object-fit: cover;
+                height: 3rem;
+                width: 3rem;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+                @media (max-width: 650px) {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+
+        .bar {
+            height: 0.2rem;
+            width: 10rem;
+            background-color: $bar_1;
+        }
+    }
 }

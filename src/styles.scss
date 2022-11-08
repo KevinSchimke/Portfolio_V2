@@ -4,17 +4,76 @@
 
 * {
     margin: 0;
+    // outline: 1px solid green;
+}
+
+html,
+body {
+    background-color: $background-main;
+    color: $fontcolor-main;
+    min-height: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: $fontcolor-link;
+    font-size: 1.5rem;
+
+    &:hover {
+        transition: all .25s ease-in-out;
+    }
+
+    @media (max-width: 850px) {
+        font-size: 1.25rem;
+    }
 }
 
 h1 {
     color: $fontcolor-h1;
-    font-size: 5rem
+    font-size: 5rem;
+
+    @media (max-width: 1000px) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: 850px) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 2rem;
+    }
 }
 
 h3 {
     color: $fontcolor-h3;
     font-size: 3.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 1000px) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: 850px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 1rem;
+    }
+}
+
+h4 {
+    color: $fontcolor-h3;
+    font-size: 2rem;
+
+    @media (max-width: 850px) {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 1rem;
+    }
 }
 
 .button-1 {
@@ -31,5 +90,15 @@ h3 {
         background-color: $background-button-hover_1;
         transform: scale(1.2);
         transition: all .25s ease-in-out;
+    }
+
+    @media (max-width: 850px) {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }

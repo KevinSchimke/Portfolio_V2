@@ -1,0 +1,37 @@
+@import "./../../../generalSCSS/colors.scss";
+@import "./../../../generalSCSS/mixin.scss";
+@import "./../../../styles.scss";
+
+header {
+    background-color: $background-main;
+    display: block;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5rem;
+
+    h4 {
+        color: $fontcolor-main;
+    }
+
+    .headerLinks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+
+        a {
+            margin: 0 1rem;
+
+            &:hover {
+                color: $fontcolor-link-hover;
+            }
+
+            @media (max-width: 700px) {
+                display: none;
+            }
+        }
+    }
+}
