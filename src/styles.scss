@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./generalSCSS/colors.scss";
+// @import "./../generalSCSS/mixin.scss";
+
+* {
+    margin: 0;
+}
+
+h1 {
+    color: $fontcolor-h1;
+    font-size: 5rem
+}
+
+h3 {
+    color: $fontcolor-h3;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.button-1 {
+    background-color: $background-button_1;
+    color: $fontcolor-button_1;
+    border: 1px solid $bordercolor-button-1;
+    border-radius: 15px;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0);
+
+    &:hover {
+        background-color: $background-button-hover_1;
+        transform: scale(1.2);
+        transition: all .25s ease-in-out;
+    }
+}

@@ -1,0 +1,40 @@
+@import "./../../../generalSCSS/colors.scss";
+@import "./../../../generalSCSS/mixin.scss";
+@import "./../../../styles.scss";
+
+.homeMain {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $background-main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    img {
+        display: block;
+        height: 100vh;
+    }
+
+    .headerTitel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .headerText {
+            display: flex;
+
+            .h3Rotate {
+                color: $fontcolor-main;
+                writing-mode: vertical-lr;
+                text-align: center;
+
+            }
+        }
+
+
+    }
+
+
+}
