@@ -8,38 +8,14 @@
     .homeContent {
         display: flex;
 
-        @media (max-width: 650px) {
-            align-items: center;
-            flex-direction: column;
-        }
-
         .profilPic {
-            object-fit: cover;
-            height: 75vh;
+            @include image(cover, 75vh);
             margin: 0 5rem 0 5rem;
-
-            @media (max-width: 1150px) {
-                margin: 0;
-            }
-
-            @media (max-width: 950px) {
-                height: 70vw;
-            }
-
-            @media (max-width: 650px) {
-                height: auto;
-                width: 60vw;
-            }
         }
 
         .homeSideContent {
-            display: flex;
-            align-items: center;
+            @include containerPosition(unset, center);
             margin-bottom: 5rem;
-
-            @media (max-width: 650px) {
-                margin-bottom: 0;
-            }
 
             .headline {
                 display: flex;
@@ -53,25 +29,18 @@
             }
 
             .contactButton {
-                display: flex;
-                justify-content: center;
+                @include containerPosition(center);
             }
         }
     }
 
     .linkbar {
-        display: flex;
-        align-items: center;
+        @include containerPosition(unset, center);
         margin-top: 2rem;
 
         a {
-            display: flex;
-            align-items: center;
+            @include containerPosition(unset, center);
             margin-left: 2.5rem;
-
-            @media (max-width: 500px) {
-                margin-left: 1rem;
-            }
 
             &:last-child {
                 margin-right: 1rem;
@@ -79,25 +48,60 @@
 
             img {
                 filter: invert(1);
-                object-fit: cover;
-                height: 3rem;
-                width: 3rem;
+                @include image(cover, 3rem, 3rem);
 
                 &:hover {
                     transform: scale(1.2);
-                }
-
-                @media (max-width: 650px) {
-                    height: 2rem;
-                    width: 2rem;
                 }
             }
         }
 
         .bar {
-            height: 0.2rem;
-            width: 10rem;
+            @include containerSize(0.2rem, 10rem);
             background-color: $bar_1;
         }
+    }
+}
+
+//---------------------------------------------------------------// 
+//----------------------// Media Queries //----------------------// 
+//---------------------------------------------------------------// 
+
+@media (max-width: 1150px) {
+    .profilPic {
+        margin: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .profilPic {
+        height: 70vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .homeContent {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .profilPic {
+        height: auto;
+        width: 60vw;
+    }
+
+    .homeSideContent {
+        margin-bottom: 0;
+    }
+
+    .linkbar a img {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .linkbar a {
+        margin-left: 1rem !important;
     }
 }
