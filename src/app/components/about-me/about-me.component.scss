@@ -3,12 +3,35 @@
 @import "./../../../styles.scss";
 
 .aboutMeMain {
-    padding: 10rem 0 0 5rem;
+    padding: 10rem 0 10rem 5rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .aboutMeContent {
-        width: 50%;
+        width: 40%;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+
+            p {
+                width: 80%;
+            }
+
+            img {
+                object-fit: contain;
+                padding: 3rem;
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+
     }
 
     .aboutMeImg {
@@ -16,33 +39,20 @@
         justify-content: center;
         align-items: center;
 
-        .borderImg {
-            position: relative;
-            border: 0.2rem solid $bordercolor-image;
-            border-radius: 100%;
-            width: 450px;
-            height: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-
-            .profileImg {
-                position: absolute;
-                top: 1rem;
-                left: 6rem;
-
-                img {
-                    height: 470px;
-                    object-fit: cover;
-                }
-            }
+        img {
+            height: 30rem;
         }
 
         .bar {
             height: 0.2rem;
-            width: 10vw;
+            width: 15vw;
             background-color: $bar_2;
         }
+    }
+
+    .bg1 {
+        position: absolute;
+        top: -12rem;
+        right: 0;
     }
 }
