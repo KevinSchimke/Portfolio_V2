@@ -1,0 +1,48 @@
+@import "./../../../generalSCSS/colors.scss";
+@import "./../../../generalSCSS/mixin.scss";
+@import "./../../../styles.scss";
+
+.aboutMeMain {
+    padding: 10rem 0 0 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .aboutMeContent {
+        width: 50%;
+    }
+
+    .aboutMeImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .borderImg {
+            position: relative;
+            border: 0.2rem solid $bordercolor-image;
+            border-radius: 100%;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .profileImg {
+                position: absolute;
+                top: 1rem;
+                left: 6rem;
+
+                img {
+                    height: 470px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .bar {
+            height: 0.2rem;
+            width: 10vw;
+            background-color: $bar_2;
+        }
+    }
+}
