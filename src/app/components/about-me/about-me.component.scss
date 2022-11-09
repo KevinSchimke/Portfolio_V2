@@ -8,8 +8,21 @@
     justify-content: space-between;
     position: relative;
 
+    @media (max-width: 1000px) {
+        padding: 5rem;
+    }
+
     .aboutMeContent {
         width: 40%;
+
+        @media (max-width: 1350px) {
+            width: 60%;
+        }
+
+        @media (max-width: 1000px) {
+            width: 90%;
+        }
+
 
         h2 {
             margin-bottom: 2rem;
@@ -18,10 +31,19 @@
         div {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-top: 2rem;
+
+            @media (max-width: 650px) {
+                flex-direction: column;
+            }
 
             p {
                 width: 80%;
+
+                @media (max-width: 650px) {
+                    width: unset;
+                }
             }
 
             img {
@@ -31,7 +53,6 @@
                 width: 3rem;
             }
         }
-
     }
 
     .aboutMeImg {
@@ -41,12 +62,32 @@
 
         img {
             height: 30rem;
+
+            @media (max-width: 1350px) {
+                height: 25rem;
+            }
+
+            @media (max-width: 1150px) {
+                height: 18rem;
+            }
+
+            @media (max-width: 1000px) {
+                display: none;
+            }
         }
 
         .bar {
             height: 0.2rem;
             width: 15vw;
             background-color: $bar_2;
+
+            @media (max-width: 1350px) {
+                width: 7vw;
+            }
+
+            @media (max-width: 1000px) {
+                display: none;
+            }
         }
     }
 
