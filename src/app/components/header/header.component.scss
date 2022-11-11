@@ -3,13 +3,8 @@
 @import "./../../../styles.scss";
 
 header {
+    @include positionFixed(0, 0, unset, 0);
     background-color: $background-main;
-    display: block;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    top: 0;
     padding: 0 5rem;
 
     h4 {
@@ -17,9 +12,7 @@ header {
     }
 
     .headerLinks {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include containerPosition(space-between, center);
         height: 10vh;
 
         a {
@@ -28,10 +21,25 @@ header {
             &:hover {
                 color: $fontcolor-link-hover;
             }
+        }
 
-            @media (max-width: 750px) {
-                display: none;
+        img {
+            @include image(cover, 2rem);
+            display: none;
+
+            &:hover {
+                cursor: pointer;
             }
         }
+    }
+}
+
+@media (max-width: 750px) {
+    a {
+        display: none;
+    }
+
+    img {
+        display: block !important;
     }
 }

@@ -28,3 +28,12 @@
     bottom: $bottom;
     left: $left;
 }
+
+@mixin positionFixed($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    position: fixed;
+    z-index: 999;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
