@@ -69,13 +69,13 @@
 
 @media (max-width: 1150px) {
     .profilPic {
-        margin: 0;
+        margin: 0 !important;
     }
 }
 
 @media (max-width: 950px) {
     .profilPic {
-        height: 70vw;
+        height: 70vw !important;
     }
 }
 

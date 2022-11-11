@@ -3,97 +3,99 @@
 @import "./../../../styles.scss";
 
 .aboutMeMain {
-    padding: 10rem 0 10rem 5rem;
-    display: flex;
-    justify-content: space-between;
+    @include containerPosition(unset, space-between);
     position: relative;
-
-    @media (max-width: 1000px) {
-        padding: 5rem;
-    }
+    padding: 10rem 0 10rem 5rem;
 
     .aboutMeContent {
         width: 40%;
-
-        @media (max-width: 1350px) {
-            width: 60%;
-        }
-
-        @media (max-width: 1000px) {
-            width: 90%;
-        }
-
 
         h2 {
             margin-bottom: 2rem;
         }
 
         div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include containerPosition(center, center);
             margin-top: 2rem;
-
-            @media (max-width: 650px) {
-                flex-direction: column;
-            }
 
             p {
                 width: 80%;
-
-                @media (max-width: 650px) {
-                    width: unset;
-                }
             }
 
             img {
-                object-fit: contain;
+                @include image(contain, 3rem, 3rem);
                 padding: 3rem;
-                height: 3rem;
-                width: 3rem;
             }
         }
     }
 
     .aboutMeImg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include containerPosition(center, center);
 
         img {
-            height: 30rem;
-
-            @media (max-width: 1350px) {
-                height: 25rem;
-            }
-
-            @media (max-width: 1150px) {
-                height: 18rem;
-            }
-
-            @media (max-width: 1000px) {
-                display: none;
-            }
+            @include image(cover, 30rem);
         }
 
         .bar {
             height: 0.2rem;
             width: 15vw;
             background-color: $bar_2;
-
-            @media (max-width: 1350px) {
-                width: 7vw;
-            }
-
-            @media (max-width: 1000px) {
-                display: none;
-            }
         }
     }
 
     .bg1 {
-        position: absolute;
-        top: -12rem;
-        right: 0;
+        @include positionAbsolute(-12rem, 0, unset, unset)
+    }
+}
+
+//---------------------------------------------------------------// 
+//----------------------// Media Queries //----------------------// 
+//---------------------------------------------------------------// 
+
+@media (max-width: 1350px) {
+    .aboutMeContent {
+        width: 60%;
+    }
+
+    .bar {
+        width: 7vw;
+    }
+
+    .aboutMeImg img {
+        height: 25rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .aboutMeImg img {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .aboutMeMain {
+        padding: 5rem;
+    }
+
+    .aboutMeContent {
+        width: 90% !important;
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .aboutMeImg img {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .aboutMeContent div {
+        flex-direction: column !important;
+    }
+
+    .aboutMeContent div p {
+        width: unset !important;
     }
 }
