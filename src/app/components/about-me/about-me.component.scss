@@ -3,7 +3,7 @@
 @import "./../../../styles.scss";
 
 .aboutMeMain {
-    @include containerPosition(unset, space-between);
+    @include containerPosition(space-between);
     position: relative;
     padding: 10rem 0 10rem 5rem;
 
