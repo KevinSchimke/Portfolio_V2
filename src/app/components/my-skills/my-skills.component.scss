@@ -3,6 +3,7 @@
 @import "./../../../styles.scss";
 
 .mySkillsMain {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 0 5rem 5rem;
@@ -11,11 +12,15 @@
         width: 50%;
 
         div {
+            .singleIcon {
+                @include containerPosition(unset, center, column)
+            }
+
             @include containerPosition(space-around);
 
             img {
                 @include image(cover, 4rem);
-                margin: 3rem;
+                margin: 3rem 3rem 1rem 3rem;
             }
         }
     }
@@ -36,6 +41,10 @@
             background-color: $bar_1;
         }
     }
+
+    .bg1 {
+        @include positionAbsolute(6rem, unset, unset, 0);
+    }
 }
 
 //---------------------------------------------------------------// 
@@ -43,7 +52,7 @@
 //---------------------------------------------------------------// 
 
 @media (max-width: 1000px) {
-    .skillIcons div img {
+    .singleIcon img {
         height: 3rem !important;
     }
 }
@@ -62,7 +71,8 @@
         margin-right: 5rem;
     }
 
-    .skillIcons div img {
+    .singleIcon img {
         margin: 1rem !important;
+        height: 2.5rem !important;
     }
 }
