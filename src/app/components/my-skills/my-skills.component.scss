@@ -8,18 +8,20 @@
     padding: 0 0 5rem 5rem;
 
     .skillIcons {
-        flex-wrap: wrap;
         width: 50%;
 
-        img {
-            margin: 2rem 3rem 2rem 3rem;
-        }
+        div {
+            @include containerPosition(space-around);
 
+            img {
+                @include image(cover, 4rem);
+                margin: 3rem;
+            }
+        }
     }
 
     .mySkillsRight {
-        display: flex;
-        align-items: center;
+        @include containerPosition(unset, center);
         text-align: end;
         width: 40%;
 
@@ -34,10 +36,33 @@
             background-color: $bar_1;
         }
     }
+}
 
+//---------------------------------------------------------------// 
+//----------------------// Media Queries //----------------------// 
+//---------------------------------------------------------------// 
 
+@media (max-width: 1000px) {
+    .skillIcons div img {
+        height: 3rem !important;
+    }
+}
 
+@media (max-width:750px) {
+    .mySkillsMain {
+        flex-direction: column-reverse;
+    }
 
+    .mySkillsRight {
+        width: 100% !important;
+    }
 
+    .skillIcons {
+        width: unset !important;
+        margin-right: 5rem;
+    }
 
+    .skillIcons div img {
+        margin: 1rem !important;
+    }
 }
