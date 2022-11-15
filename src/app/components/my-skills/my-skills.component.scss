@@ -10,6 +10,7 @@
 
     .skillIcons {
         width: 50%;
+        z-index: 1;
 
         div {
             .singleIcon {
@@ -44,6 +45,8 @@
 
     .bg1 {
         @include positionAbsolute(6rem, unset, unset, 0);
+        // filter: brightness(0.5);
+        z-index: 0;
     }
 }
 

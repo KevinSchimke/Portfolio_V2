@@ -37,6 +37,7 @@
     .linkbar {
         @include containerPosition(unset, center);
         margin-top: 2rem;
+        z-index: 1;
 
         a {
             @include containerPosition(unset, center);

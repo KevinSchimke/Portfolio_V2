@@ -1,0 +1,60 @@
+@import "./../../../generalSCSS/colors.scss";
+@import "./../../../generalSCSS/mixin.scss";
+@import "./../../../styles.scss";
+
+.myProjectsMain {
+
+
+    .headline {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .bar {
+            height: 0.2rem;
+            width: 15vw;
+            margin-right: 2.5rem;
+            background-color: $bar_1;
+        }
+    }
+
+    .projectMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10rem 0;
+
+        img {
+            object-fit: cover;
+            height: 400px;
+        }
+
+
+
+        .projectContent {
+            width: 500px;
+            // text-align: end;
+
+            span {
+                color: $fontcolor-sub;
+                font-size: clamp(1rem, 0.852rem + 0.74vw, 1.5rem);
+            }
+
+            .projectButtons {
+                display: flex;
+                // justify-content: flex-end;
+
+                div {
+                    display: flex;
+
+                    &:first-child {
+                        margin-right: 5rem;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}
