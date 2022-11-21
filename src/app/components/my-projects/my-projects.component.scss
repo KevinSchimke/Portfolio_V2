@@ -3,12 +3,9 @@
 @import "./../../../styles.scss";
 
 .myProjectsMain {
-
-
     .headline {
         position: relative;
-        display: flex;
-        align-items: center;
+        @include containerPosition(unset, center);
 
         .bar {
             height: 0.2rem;
@@ -18,24 +15,16 @@
         }
     }
 
-
-
     .projectMain {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        @include containerPosition(center, center);
         margin: 10rem 0;
 
         img {
-            object-fit: cover;
-            height: 300px;
+            @include image(cover, 300px);
         }
-
-
 
         .projectContent {
             width: 500px;
-            // margin: 0 10rem;
 
             span {
                 color: $fontcolor-sub;
@@ -44,7 +33,6 @@
 
             .projectButtons {
                 display: flex;
-                // justify-content: flex-end;
 
                 div {
                     display: flex;
@@ -53,15 +41,18 @@
                         margin-right: 5rem;
                     }
                 }
-
             }
         }
     }
 }
 
+//---------------------------------------------------------------// 
+//----------------------// Media Queries //----------------------// 
+//---------------------------------------------------------------// 
+
 @media (max-width: 1100px) {
     .projectMain {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .mediaRotate {
