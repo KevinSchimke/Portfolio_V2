@@ -16,7 +16,7 @@
     }
 
     .projectMain {
-        @include containerPosition(center, center);
+        @include containerPosition(space-evenly, center);
         margin: 10rem 0;
 
         img {

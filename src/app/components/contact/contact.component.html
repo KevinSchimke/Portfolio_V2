@@ -1,0 +1,52 @@
+<div class="contactMain">
+    <div class="headline">
+        <div>
+            <h2>Contact</h2>
+        </div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="contactSub">
+        <div>
+            <h4>Got a problem to solve?</h4>
+            <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+                projects with my work.</p>
+            <span>Need a Frontend developer? Contact me!</span>
+        </div>
+
+
+        <form (ngSubmit)="sendMail()" [formGroup]="mail">
+            <div class="formElement">
+                <input [ngClass]="[checkIsAllValid('name') ? 'success' : 'error']" placeholder="Your Name"
+                    formControlName="name" type="text">
+                <div class="errorMessage">
+                    <span [ngClass]="[checkIsValid('name', 'required') ? 'visible' : 'hidden']"><strong>
+                            Your Name is required</strong></span>
+                    <span [ngClass]="[checkIsValid('name', 'minlength') ? 'visible' : 'hidden']"><strong>
+                            Your Name is to short</strong></span>
+                </div>
+            </div>
+            <div class="formElement">
+                <input [ngClass]="[checkIsAllValid('email') ? 'success' : 'error']" placeholder="Your E-Mail"
+                    formControlName="email" type="email">
+                <div class="errorMessage">
+                    <span [ngClass]="[checkIsValid('email', 'required') ? 'visible' : 'hidden']"><strong>
+                            Your E-mail is required</strong></span>
+                    <span [ngClass]="[checkIsValid('email', 'email') ? 'visible' : 'hidden']"><strong>
+                            Your E-Mail is invalid</strong></span>
+                </div>
+            </div>
+            <div class="formElement">
+                <textarea [ngClass]="[checkIsAllValid('message') ? 'success' : 'error']" placeholder="Your message"
+                    formControlName="message"></textarea>
+                <div class="errorMessage">
+                    <span [ngClass]="[checkIsValid('message', 'required') ? 'visible' : 'hidden']"><strong>
+                            Your message is required</strong></span>
+                    <span [ngClass]="[checkIsValid('message', 'minlength') ? 'visible' : 'hidden']"><strong>
+                            Your message is to short</strong></span>
+                </div>
+            </div>
+            <button type="submit" #sendButton>Senden</button>
+        </form>
+    </div>
+</div>
