@@ -68,6 +68,7 @@ p {
         background-color: $background-button-hover_1;
         transform: scale(1.2);
         transition: all .25s ease-in-out;
+        cursor: pointer;
     }
 
     @media (max-width: 850px) {
