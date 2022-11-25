@@ -10,6 +10,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { InViewDirective } from './directives/in-view.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutMeComponent,
     MySkillsComponent,
     MyProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    InViewDirective
   ],
   imports: [
     BrowserModule,

@@ -17,10 +17,15 @@ header {
 
         a {
             margin: 0 1rem;
+            color: $fontcolor-main;
 
             &:hover {
                 color: $fontcolor-link-hover;
             }
+        }
+
+        .link_color_active {
+            color: $fontcolor-link-hover;
         }
 
         img {
