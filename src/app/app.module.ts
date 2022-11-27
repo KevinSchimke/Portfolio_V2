@@ -11,6 +11,7 @@ import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { InViewDirective } from './directives/in-view.directive';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InViewDirective } from './directives/in-view.directive';
     MySkillsComponent,
     MyProjectsComponent,
     ContactComponent,
-    InViewDirective
+    InViewDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

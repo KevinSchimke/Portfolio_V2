@@ -48,7 +48,6 @@
             }
 
             img {
-                filter: invert(1);
                 @include image(cover, 3rem, 3rem);
 
                 &:hover {
