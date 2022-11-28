@@ -1,6 +1,6 @@
-@import "./../../../generalSCSS/colors.scss";
-@import "./../../../generalSCSS/mixin.scss";
-@import "./../../../styles.scss";
+@import "./../../../../generalSCSS/colors.scss";
+@import "./../../../../generalSCSS/mixin.scss";
+@import "./../../../../styles.scss";
 
 .aboutMeMain {
     @include containerPosition(space-between);
