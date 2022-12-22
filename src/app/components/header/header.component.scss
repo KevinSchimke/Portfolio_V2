@@ -28,7 +28,7 @@ header {
 
 
         .link_color_active {
-            color: $fontcolor-link-hover;
+            color: $fontcolor-link-hover !important
         }
 
         img {
@@ -47,16 +47,16 @@ header {
 
     .menu {
         .mediaLinks {
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            a {
+                margin: 2vh 0;
+            }
         }
-
     }
-
-
 }
 
 //---------------------------------------------------------------// 
@@ -70,5 +70,11 @@ header {
 
     img {
         display: block !important;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 1rem;
     }
 }

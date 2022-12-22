@@ -95,11 +95,15 @@
 }
 
 @media (max-width: 650px) {
-    .aboutMeContent div {
-        flex-direction: column !important;
+    .aboutMeContent div img {
+        padding-left: 0 !important;
     }
 
     .aboutMeContent div p {
         width: unset !important;
+    }
+
+    .aboutMeMain {
+        padding: 2.5rem 1rem !important;
     }
 }

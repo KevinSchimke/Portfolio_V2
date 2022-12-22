@@ -1,0 +1,13 @@
+.impressum {
+    margin-top: 10vh;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    display: flex;
+
+    img {
+        object-fit: cover;
+        object-position: 25% 50%;
+        width: 40%;
+        margin-right: 5rem;
+    }
+}

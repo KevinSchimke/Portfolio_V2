@@ -13,6 +13,9 @@
         display: flex;
         flex-direction: column;
 
+        h4 {
+            font-size: 2rem;
+        }
 
     }
 
@@ -30,5 +33,23 @@
                 transform: scale(1.2);
             }
         }
+    }
+}
+
+//---------------------------------------------------------------// 
+//----------------------// Media Queries //----------------------// 
+//---------------------------------------------------------------// 
+
+@media (max-width: 650px) {
+    .footerMain {
+        flex-direction: column !important;
+    }
+
+    .footerLegal {
+        align-items: center;
+    }
+
+    .footerLegal a {
+        margin: 0.5rem 0 !important;
     }
 }
