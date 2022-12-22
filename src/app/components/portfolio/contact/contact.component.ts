@@ -20,17 +20,19 @@ export class ContactComponent implements OnInit {
   }
   async sendMail() {
 
-    const formData = new FormData();
-    formData.append('name', this.mail.get('name')?.value);
-    formData.append('email', this.mail.get('email')?.value);
-    formData.append('message', this.mail.get('message')?.value);
+    if (this.mail.status === 'VALID') {
+      const formData = new FormData();
+      formData.append('name', this.mail.get('name')?.value);
+      formData.append('email', this.mail.get('email')?.value);
+      formData.append('message', this.mail.get('message')?.value);
 
 
-    await fetch("https://kevin-schimke.de/send_mail.php",
-      {
-        method: 'POST',
-        body: formData
-      });
+      await fetch("https://kevin-schimke.de/send_mail.php",
+        {
+          method: 'POST',
+          body: formData
+        });
+    }
   }
 
   checkIsValid(item: any, param: any) {

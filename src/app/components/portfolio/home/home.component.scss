@@ -2,20 +2,38 @@
 @import "./../../../../generalSCSS/mixin.scss";
 @import "./../../../../styles.scss";
 
+
+
 .homeMain {
     padding-top: 10vh;
+
+    .bg {
+        width: 50%;
+        position: absolute;
+    }
+
+    .wave {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 20vh;
+    }
 
     .homeContent {
         display: flex;
 
+
         .profilPic {
             @include image(cover, 75vh);
             margin: 0 5rem 0 5rem;
+            transform: scaleX(-1);
+
         }
 
         .homeSideContent {
             @include containerPosition(unset, center);
             margin-bottom: 5rem;
+            z-index: 2;
 
             .headline {
                 display: flex;
@@ -30,6 +48,7 @@
 
             .contactButton {
                 @include containerPosition(center);
+
             }
         }
     }
@@ -37,11 +56,13 @@
     .linkbar {
         @include containerPosition(unset, center);
         margin-top: 2rem;
-        z-index: 1;
+        position: relative;
+        z-index: 2;
 
         a {
             @include containerPosition(unset, center);
             margin-left: 2.5rem;
+
 
             &:last-child {
                 margin-right: 1rem;
@@ -63,9 +84,9 @@
     }
 }
 
-//---------------------------------------------------------------// 
-//----------------------// Media Queries //----------------------// 
-//---------------------------------------------------------------// 
+//---------------------------------------------------------------//
+//----------------------// Media Queries //----------------------//
+//---------------------------------------------------------------//
 
 @media (max-width: 1150px) {
     .profilPic {
@@ -91,7 +112,7 @@
     }
 
     .homeSideContent {
-        margin-bottom: 0;
+        margin-top: -60px;
     }
 
     .linkbar a img {
@@ -103,5 +124,9 @@
 @media (max-width: 500px) {
     .linkbar a {
         margin-left: 1rem !important;
+    }
+
+    .homeSideContent {
+        margin-bottom: 0 !important;
     }
 }

@@ -1,14 +1,23 @@
 <header>
     <div class="headerLinks">
         <h4>Kevin Schimke</h4>
-        <div>
+        <div class="desktopLinks">
             <a [ngClass]="{'link_color_active' : this.nav.currentInView == 'home' }" href="#home">Home</a>
             <a [ngClass]="{'link_color_active' : this.nav.currentInView == 'aboutMe' }" href="#aboutMe">About me</a>
             <a [ngClass]="{'link_color_active' : this.nav.currentInView == 'mySkills' }" href="#mySkills">Skills</a>
             <a [ngClass]="{'link_color_active' : this.nav.currentInView == 'myProjects' }"
                 href="#myProjects">Projects</a>
             <a [ngClass]="{'link_color_active' : this.nav.currentInView == 'contact' }" href="#contact">Contact</a>
-            <img src="./../../../assets/img/menu.png">
+            <img (click)="showMediaMenu()" src="./../../../assets/img/menu.png">
+        </div>
+    </div>
+    <div class="menu" [ngClass]="{'showMediaMenu': !showMenu} ">
+        <div class="mediaLinks">
+            <a href="#home">Home</a>
+            <a href="#aboutMe">About me</a>
+            <a href="#mySkills">Skills</a>
+            <a href="#myProjects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
 </header>

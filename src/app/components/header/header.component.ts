@@ -8,9 +8,14 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class HeaderComponent implements OnInit {
 
+  showMenu = false;
+
   constructor(public nav: NavigationService) { }
 
   ngOnInit(): void {
   }
 
+  showMediaMenu() {
+    this.showMenu = !this.showMenu;
+  }
 }

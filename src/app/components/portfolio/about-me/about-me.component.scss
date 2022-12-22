@@ -26,6 +26,7 @@
             img {
                 @include image(contain, 3rem, 3rem);
                 padding: 3rem;
+
             }
         }
     }
@@ -35,6 +36,7 @@
 
         img {
             @include image(cover, 30rem);
+            z-index: 2;
         }
 
         .bar {
@@ -46,7 +48,7 @@
 
     .bg1 {
         @include positionAbsolute(-12rem, 0, unset, unset);
-        z-index: 0;
+        z-index: 1;
     }
 }
 

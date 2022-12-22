@@ -15,14 +15,17 @@ header {
         @include containerPosition(space-between, center);
         height: 10vh;
 
-        a {
-            margin: 0 1rem;
-            color: $fontcolor-main;
+        .desktopLinks {
+            a {
+                margin: 0 1rem;
+                color: $fontcolor-main;
 
-            &:hover {
-                color: $fontcolor-link-hover;
+                &:hover {
+                    color: $fontcolor-link-hover;
+                }
             }
         }
+
 
         .link_color_active {
             color: $fontcolor-link-hover;
@@ -37,14 +40,31 @@ header {
             }
         }
     }
+
+    .showMediaMenu {
+        display: none;
+    }
+
+    .menu {
+        .mediaLinks {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+
 }
 
 //---------------------------------------------------------------// 
 //----------------------// Media Queries //----------------------// 
 //---------------------------------------------------------------// 
 
-@media (max-width: 750px) {
-    a {
+@media (max-width: 850px) {
+    .desktopLinks a {
         display: none;
     }
 
