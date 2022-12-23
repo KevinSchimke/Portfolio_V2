@@ -17,7 +17,7 @@
 
     .projectMain {
         @include containerPosition(space-evenly, center);
-        margin: 10rem 0;
+        margin: 10rem 5rem;
 
         img {
             @include image(cover, 300px);
@@ -78,7 +78,7 @@
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .projectContent {
         width: unset !important;
     }
