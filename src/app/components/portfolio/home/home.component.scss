@@ -2,8 +2,6 @@
 @import "./../../../../generalSCSS/mixin.scss";
 @import "./../../../../styles.scss";
 
-
-
 .homeMain {
     padding-top: 10vh;
 
@@ -22,17 +20,15 @@
     .homeContent {
         display: flex;
 
-
         .profilPic {
             @include image(cover, 75vh);
             margin: 0 5rem 0 5rem;
             transform: scaleX(-1);
-
         }
 
         .homeSideContent {
             @include containerPosition(unset, center);
-            margin-bottom: 5rem;
+            margin: 0 1rem 5rem 1rem;
             z-index: 2;
 
             .headline {
@@ -48,7 +44,6 @@
 
             .contactButton {
                 @include containerPosition(center);
-
             }
         }
     }
@@ -61,7 +56,6 @@
         a {
             @include containerPosition(unset, center);
             margin-left: 2.5rem;
-
 
             &:last-child {
                 margin-right: 1rem;

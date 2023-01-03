@@ -11,5 +11,4 @@ export class MyProjectsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

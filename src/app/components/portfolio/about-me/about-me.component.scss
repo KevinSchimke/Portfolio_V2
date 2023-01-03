@@ -24,7 +24,7 @@
             }
 
             img {
-                @include image(contain, 3rem, 3rem);
+                @include image(contain, 4rem, 3rem);
                 padding: 3rem;
 
             }
@@ -95,6 +95,10 @@
 }
 
 @media (max-width: 650px) {
+    .aboutMeContent {
+        width: 100% !important;
+    }
+
     .aboutMeContent div img {
         padding-left: 0 !important;
     }

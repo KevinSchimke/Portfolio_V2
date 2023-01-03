@@ -26,7 +26,6 @@ export class ContactComponent implements OnInit {
       formData.append('email', this.mail.get('email')?.value);
       formData.append('message', this.mail.get('message')?.value);
 
-
       await fetch("https://kevin-schimke.de/send_mail.php",
         {
           method: 'POST',

@@ -26,7 +26,6 @@ header {
             }
         }
 
-
         .link_color_active {
             color: $fontcolor-link-hover !important
         }
@@ -76,6 +75,10 @@ header {
 @media (max-width: 650px) {
     header {
         padding: 0 1rem;
+    }
+
+    .headerLinks {
+        height: 6vh !important;
     }
 
     .desktopLinks img {
