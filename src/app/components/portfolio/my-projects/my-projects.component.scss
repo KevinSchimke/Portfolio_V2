@@ -3,6 +3,8 @@
 @import "./../../../../styles.scss";
 
 .myProjectsMain {
+    position: relative;
+
     .headline {
         position: relative;
         @include containerPosition(unset, center);
@@ -21,18 +23,22 @@
 
         img {
             @include image(cover, 300px);
+            z-index: 1;
         }
 
         .projectContent {
             width: 500px;
+            z-index: 1;
 
             span {
+                z-index: 1;
                 color: $fontcolor-sub;
                 font-size: clamp(1rem, 0.852rem + 0.74vw, 1.5rem);
             }
 
             .projectButtons {
                 display: flex;
+                z-index: 1;
 
                 div {
                     display: flex;
@@ -43,6 +49,12 @@
                 }
             }
         }
+    }
+
+    .bg1 {
+        @include positionAbsolute(20rem, 0, unset, unset);
+        transform: scaleX(-1);
+        z-index: 0;
     }
 }
 

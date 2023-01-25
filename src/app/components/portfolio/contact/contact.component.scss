@@ -3,6 +3,8 @@
 @import "./../../../../styles.scss";
 
 .contactMain {
+    position: relative;
+
     .headline {
         position: relative;
         @include containerPosition(flex-end, center);
@@ -22,19 +24,23 @@
         .contactText {
             padding-right: 2rem;
             width: 30vw;
+            z-index: 1;
 
             h4 {
                 color: $fontcolor-main;
                 margin-bottom: 1.5rem;
+                z-index: 1;
             }
 
             p {
                 margin-bottom: 1rem;
+                z-index: 1;
             }
         }
 
         form {
             @include containerPosition(unset, center, column);
+            z-index: 1;
 
             .formElement {
                 margin-bottom: 1.2rem;
@@ -84,6 +90,12 @@
             }
         }
     }
+
+    .bg1 {
+        @include positionAbsolute(-40rem, unset, unset, 0);
+        transform: scaleX(-1);
+        z-index: 0;
+    }
 }
 
 //---------------------------------------------------------------// 
@@ -110,6 +122,12 @@
 
     .formElement {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .bg1 {
+        top: -15rem !important;
     }
 }
 

@@ -31,6 +31,8 @@ export class ContactComponent implements OnInit {
           method: 'POST',
           body: formData
         });
+
+      this.mail.reset();
     }
   }
 
