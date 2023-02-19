@@ -19,6 +19,23 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     min-height: 100vh;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #fa7902;
+        border-radius: 10px;
+
+        &:hover {
+            background: #fa7902a7;
+        }
+    }
 }
 
 a {
