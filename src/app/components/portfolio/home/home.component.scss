@@ -21,7 +21,7 @@
         display: flex;
 
         .profilPic {
-            @include image(cover, 75vh);
+            @include image(cover, 75vw);
             margin: 0 5rem 0 5rem;
             transform: scaleX(-1);
         }
