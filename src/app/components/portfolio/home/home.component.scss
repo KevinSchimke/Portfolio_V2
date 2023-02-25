@@ -21,7 +21,7 @@
         display: flex;
 
         .profilPic {
-            @include image(cover, 75vw);
+            @include image(cover, 75vh);
             margin: 0 5rem 0 5rem;
             transform: scaleX(-1);
         }
@@ -85,14 +85,20 @@
 //---------------------------------------------------------------//
 //----------------------// Media Queries //----------------------//
 //---------------------------------------------------------------//
+@media (height > 2000px) {
+    .profilPic {
+        height: 75vw !important;
+    }
+}
 
-@media (max-width: 1150px) {
+
+@media (max-width: 1250px) {
     .profilPic {
         margin: 0 !important;
     }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1250px) {
     .profilPic {
         height: 70vw !important;
     }
