@@ -26,10 +26,6 @@ header {
             }
         }
 
-        .link_color_active {
-            color: $fontcolor-link-hover !important
-        }
-
         img {
             @include image(cover, 2rem);
             display: none;
@@ -55,6 +51,10 @@ header {
                 margin: 2vh 0;
             }
         }
+    }
+
+    .link_color_active {
+        color: $fontcolor-link-hover !important
     }
 }
 
